@@ -285,6 +285,7 @@ h1 {
 }
 
 .badge-count {
+  display: none;
   position: absolute;
   top: 6px;
   right: 10px;
@@ -299,6 +300,10 @@ h1 {
   line-height: 16px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+}
+
+.has-count .badge-count {
+  display: block;
 }
 
 /* Active Indicator */
