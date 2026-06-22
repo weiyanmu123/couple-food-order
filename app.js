@@ -574,7 +574,7 @@ function renderProfileDialog() {
   profileTaste.value = profile.taste || "";
   profileAvoid.value = profile.avoid || "";
   profileNote.value = profile.note || "";
-  profilePreviewName.textContent = profile.name || "设置对象名字";
+  profilePreviewName.textContent = profile.name || "我的名字";
   profilePreviewTaste.textContent = profile.name ? "点菜单会显示他的名字" : "点菜单会显示他的名字";
   profileTip.hidden = true;
 
