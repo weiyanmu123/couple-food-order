@@ -745,7 +745,8 @@ profileForm.addEventListener("submit", (event) => {
 
   saveProfile(profile);
   pendingAvatar = "";
-  renderProfileDialog();
+  profileDialog.close();
+  render(); // 重新渲染，更新所有用到名字的地方
   showToast("设置已保存");
 });
 
