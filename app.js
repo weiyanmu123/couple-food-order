@@ -424,9 +424,9 @@ function buildOrderText(items) {
     profile.note ? `我想说：${profile.note}` : ""
   ].filter(Boolean);
 
-  return `${boyfriendName}，今天想吃这些：\n${lines.join("\n")}${
+  return `${profile.name || "我的名字"}，今天想吃这些：\n${lines.join("\n")}${
     extras.length ? `\n\n${extras.join("\n")}` : ""
-  }\n\n爱她就给做饭吧。`;
+  }`;
 }
 
 function renderOrderDialog() {
