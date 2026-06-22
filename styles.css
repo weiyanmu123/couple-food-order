@@ -284,19 +284,20 @@ h1 {
   transform: scale(1.05);
 }
 
-.category-item.has-count::before {
+.badge-count {
   position: absolute;
-  top: 8px;
-  right: 12px;
-  width: 16px;
+  top: 6px;
+  right: 10px;
+  min-width: 16px;
   height: 16px;
-  border-radius: 50%;
+  padding: 0 4px;
+  border-radius: 8px;
   background: var(--primary);
   color: white;
   font-size: 10px;
   font-weight: 700;
   line-height: 16px;
-  content: attr(data-count);
+  text-align: center;
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
 }
 
