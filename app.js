@@ -89,8 +89,9 @@ const profileTaste = document.querySelector("#profileTaste");
 const profileAvoid = document.querySelector("#profileAvoid");
 const profileNote = document.querySelector("#profileNote");
 const profileTip = document.querySelector("#profileTip");
-const profilePreviewName = document.querySelector("#profilePreviewName");
-const profilePreviewTaste = document.querySelector("#profilePreviewTaste");
+const shopAvatar = document.querySelector("#shopAvatar");
+const shopName = document.querySelector("#shopName");
+const shopTagline = document.querySelector("#shopTagline");
 const profileAvatar = document.querySelector("#profileAvatar");
 const avatarPreview = document.querySelector("#avatarPreview");
 const menuTab = document.querySelectorAll(".tab")[0];
@@ -568,6 +569,19 @@ async function sendToWechat(orderText) {
   }
 }
 
+function renderShopHeader() {
+  const profile = readProfile();
+  if (shopAvatar && profile.avatar) {
+    shopAvatar.src = profile.avatar;
+  }
+  if (shopName && profile.name) {
+    shopName.textContent = profile.name;
+  }
+  if (shopTagline && profile.taste) {
+    shopTagline.textContent = profile.taste;
+  }
+}
+
 function renderProfileDialog() {
   const profile = readProfile();
   profileName.value = profile.name || "";
@@ -630,6 +644,7 @@ function resetDialog() {
 }
 
 function render() {
+  renderShopHeader();
   renderCategories();
   renderDishes();
   cartCount.textContent = String(readCartItems().reduce((sum, item) => sum + item.count, 0));
